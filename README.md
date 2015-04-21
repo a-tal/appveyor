@@ -1,5 +1,5 @@
 # appveyor
-Scripts for running python on appveyor
+Scripts for running python on [appveyor](http://www.appveyor.com/)
 
 # Author
 All credit goes to Olivier Grisel. Just storing his work here to submodule this out for other projects.
