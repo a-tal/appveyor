@@ -73,15 +73,16 @@ function InstallPip ($python_home) {
 
 function InstallPackage ($python_home, $pkg) {
     $pip_path = $python_home + "/Scripts/pip.exe"
-    & $pip_path install $pkg
+    & $pip_path install -q -U $pkg
 }
 
 function main () {
     InstallPython $env:PYTHON_VERSION $env:PYTHON_ARCH $env:PYTHON
     InstallPip $env:PYTHON
     InstallPackage $env:PYTHON wheel
-    InstallPackage $env:PYTHON pexpect
     InstallPackage $env:PYTHON pytest-cov
+    InstallPackage $env:PYTHON setuptools
+    InstallPackage $env:PYTHON pyinstaller
 }
 
 main
